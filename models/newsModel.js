@@ -2,6 +2,7 @@ const formatarData = require("../middlewares/formatarData");
 const mongoose = require("mongoose");
 
 const News = mongoose.model("News", {
+  extensionfile: { type: String, required: true },
   src: { type: String, required: true },
   title: { type: String, required: true },
   conteudo: { type: String, unique: true, required: true },

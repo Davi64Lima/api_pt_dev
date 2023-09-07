@@ -50,21 +50,17 @@ exports.create = async (req, res) => {
     const file = req.file;
 
     if (!file) {
-      if (req.file) {
-        fs.unlinkSync(req.file.path);
-      }
-      return res.status(422).json({ msg: "A imagem é obrigatorio!" });
+      return res.status(400).send("Nenhum arquivo enviado.");
     }
+    // Lê o arquivo e o converte em Base64
+    const imagemBase64 = file.buffer.toString("base64");
+    const extension = file.originalname.split(".").pop();
+    console.log(extension);
+
     if (!title) {
-      if (req.file) {
-        fs.unlinkSync(req.file.path);
-      }
       return res.status(422).json({ msg: "O titulo é obrigatorio!" });
     }
     if (!conteudo) {
-      if (req.file) {
-        fs.unlinkSync(req.file.path);
-      }
       return res.status(422).json({ msg: "O conteudo é obrigatorio!" });
     }
     if (!autor) {
@@ -72,9 +68,6 @@ exports.create = async (req, res) => {
     }
 
     if (!categoria) {
-      if (req.file) {
-        fs.unlinkSync(req.file.path);
-      }
       return res
         .status(422)
         .json({ msg: "É obrigatorio informar a categoria" });
@@ -83,14 +76,13 @@ exports.create = async (req, res) => {
     const newsExist = await News.findOne({ title: title });
 
     if (newsExist) {
-      if (req.file) {
-        fs.unlinkSync(req.file.path);
-      }
       return res.status(422).json({ msg: "Esta noticia já esta cadastrado" });
     }
 
     const news = new News({
-      src: file.path.slice(85),
+      // src: file.path.slice(85),
+      extensionfile: extension,
+      src: imagemBase64,
       title,
       conteudo,
       coments,
@@ -103,9 +95,6 @@ exports.create = async (req, res) => {
 
     res.status(201).json({ msg: "Noticia cadastrada com sucesso!" });
   } catch (err) {
-    if (req.file) {
-      fs.unlinkSync(req.file.path);
-    }
     console.log(err);
     res.status(500).json({ msg: "Algo aconteceu de errado!" });
   }
