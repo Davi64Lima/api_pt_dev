@@ -34,7 +34,7 @@ app.use("/", uploadsRouter);
 
 // Open Route
 app.get("/", (req, res) => {
-  res.status(200).json({ msg: "Bem vindo a API!" });
+  res.status(200).sendFile(path.join(__dirname, "portifolio/index.html"));
 });
 
 app.listen(port, () => {

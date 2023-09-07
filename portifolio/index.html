@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Portifólio</title>
+    <style>:root {
+        --body-bg-color: #22212C;
+        --text-color: #837E9F;
+        --bg-cards: #302F3D;
+        --bg-techs: #CB92B1;
+      }
+    
+      body {
+        background-color: var(--body-bg-color);
+        width: calc(100vw - 1rem);
+        overflow-x: hidden;
+        font-family: Merriweather Sans; 
+        color: var(--text-color);
+      }
+    
+      .container{
+        display: flex;
+        margin: 2rem;
+        gap: 3.75rem;
+      }
+    
+      .caixa-fundo {
+        background-color: var(--bg-cards);
+        border-radius: 1.25rem;
+        box-shadow: 0 0.155rem 0.155rem black;
+        width: 100%;
+      }
+    
+      .caixafundo2 {
+        padding: 10px 0;
+        background-color: var(--bg-cards);
+        display: flex;
+        border-radius: 20px;
+        box-shadow: 1px 1px 3px black;
+        min-width: 348px;
+    
+      }
+      .sidebar {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.875rem;
+      }
+    
+      .maincontent {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 80%;
+      }
+      
+      
+      /* DIV DO PERFIL  */
+      .container-perfil {
+        color: var(--text-color);
+        font-weight:700;
+        padding: 2rem 0 1rem 0;
+      }
+    
+      .container-perfil-img {
+        display: flex;
+        align-items: center;
+        margin: 0 auto 2rem auto;
+        width: 8rem;
+        border: 0.125rem solid #00FF00;
+        border-radius:50%;
+    
+      }
+      .container-perfil-titulo {
+        font-size: 1.438rem;
+        font-weight: 700;
+        margin-bottom: 0.625rem;
+        text-align: center;
+      }
+      .container-perfil-txtmenor{
+        font-size: 0.813rem;
+        font-weight: 300;
+        text-align: center;
+        padding: 0.625rem;
+    
+      }
+    
+    /* DIV DAS REDES SOCIAIS  */
+    
+      .container-social{
+        color: var(--text-color);
+        font-weight:700;
+      }
+    
+      .container-social-lista{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.5rem auto;
+        
+      }
+      .container-social-icons{
+        font-size: 0.813rem;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        margin-left: 2.5rem;
+        word-break: break-word;
+      } 
+      .container-social-icons:hover{
+        opacity: 0.7;
+      }
+      .container-social-img{
+        margin-right: 1.25rem;
+      }
+    
+      /* DIV DAS TECNOLOGIAS */
+    
+      .container-tec{
+        color: var(--text-color);
+        font-weight:700;
+        display: flex;
+        flex-direction: column;
+      }
+      .container-tec-titulo{
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-left: 1.25rem;
+        padding: 1.88rem 0 1.25rem 0 ;
+      }
+    
+      .container-tec-lista{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;  
+      }
+    
+      .container-tec-li{
+        
+        background-color:var(--bg-techs);
+        display: flex;
+        width: 5.375rem;
+        height: 1.5rem;
+        border-radius: 1.875rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .container-tec-text{
+        
+        font-size: 0.813rem;
+        font-weight: 300;
+        color: black;
+      }
+    
+      /* DIV DAS EXPERIÊNCIAS e FORMAÇÃO ACADEMICA  */
+      .container-exp{
+        display: flex;
+        flex-direction: column;
+    
+      }
+      .container-educa{
+        margin-bottom: 2.5rem;
+      }
+      .container-exp-educa-titulo{
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-left: 1.25rem;
+        padding: 1.88rem 0 1.25rem 0 ;
+      }
+      .container-exp-educa-lista{
+        list-style-type: square;
+      }
+      .container-exp-educa-titulo2{
+        font-size: 0.875rem; 
+        line-height: 1rem;
+        font-weight: bold;
+        padding: 0.15rem;
+      }
+      .container-exp-educa-li{
+        margin: 0 0 1.25rem 4.375rem;
+      }
+      .container-exp-educa-text{
+        font-size: 0.75rem;
+        font-weight: 300;
+        padding: 0.15rem;
+      }
+    
+        /* DIV DOS PROJETOS   */
+      .container-projetos{
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .container-projetos-titulo {
+        margin: 1.88rem;
+        font-size: 1.25rem;
+      }
+      .container-projetos-texto{
+        margin: 2.13rem;
+        font-size: 0.875rem;
+        font-weight: 300;
+      }
+    
+      /* DIV DO UPLOAD */
+      .container-upload{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+      }
+      .container-upload-caixa{
+        width: 100%;
+        /* width: 28.8125rem */
+        padding: 2rem;
+        transition: 300ms;
+      }
+      .container-upload-caixa:hover{
+        opacity: 0.7;
+      }
+      .anchor {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 2rem;
+      }
+    .container-upload-titulo{
+      font-weight: 700;
+      display: flex;
+      font-size: 1rem;
+      align-items: center;
+      gap: 1rem;
+    }
+    .container-upload-texto{
+      line-height: 1.5rem;
+    }
+    
+    .container-upload-icon{
+      display:flex;
+      margin-top: auto;
+      justify-content: space-between;
+    
+      width: 100%;
+    }
+    .container-upload-icon1{
+      display: flex;
+      align-items: center;
+    }
+    .space{
+      font-size: 0.875rem;
+      margin-top: auto;
+    }
+    .posicao-icon{
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    
+    .container-repo-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .container-repo-info-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      gap: .5rem;
+    }
+    
+    
+    /* DIV DOS POSTS */
+    .container-post{
+      display: flex;
+    }
+    .container-post-img {
+      margin: 1.94rem 1.25rem 2.62rem 1.88rem ;
+      width: 9rem;
+      border: 0.125rem solid;
+      border-radius:50%;
+    }
+    .container-post-elementos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap:3rem
+    }
+    .container-post-elementos-p1{
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem
+    }
+    .container-post-elementos-p2{
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem
+    }
+    .container-post-titulo{
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+    .container-post-txt1{
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+    .container-post-txt2{
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .container-post-lista{
+      font-size: 0.875rem;
+      font-weight: 400;
+      display: flex;
+      gap: 1rem
+    } </style>
+    <style >html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }</style>
+</head>
+<body>
+    <main class="container">
+    <section class= "sidebar">
+        <div class="caixa-fundo container-perfil">
+
+            <img src="https://media.licdn.com/dms/image/D4D03AQFmM-cSGkYAYA/profile-displayphoto-shrink_800_800/0/1691492817973?e=1699488000&v=beta&t=yrL1_mskvVYa-6iwqE5VYO-pD7BHE7PC9lzKSw7-Doo" alt="Foto de Perfil" class="container-perfil-img">
+            <h1 class="container-perfil-titulo"> João Davi Dantas Lima</h1>
+            <p class="container-perfil-txtmenor"> Desenvolvedor Back-End</p>
+            <p class="container-perfil-txtmenor">  JavaScript </p>
+        </div>
+
+        <div class=" caixa-fundo container-social">
+            <ul class="container-social-lista">
+                <li class="teste "><a href="https://github.com/Davi64Lima" class="container-social-icons"target="_blank">Davi Lima</a></li>
+                <li class="teste "><a href="https://www.linkedin.com/in/davi64lima/" class="container-social-icons"target="_blank">Davi64lima</a></li>
+                <li class="teste " ><a href="mailto:novodavilima.com" class="container-social-icons" target="_blank">novodavilima@gmail.com</a></li>
+                <li class="teste "><a href="https://wa.me/5571993097169" class="container-social-icons" target="_blank">+55 71 99309-7169</a></li>
+                <li class="teste "><a href="https://www.instagram.com/davi64lima/" class="container-social-icons" target="_blank">davi64lima</a></li>
+            </ul>
+        </div>
+
+       
+    </section>
+    </main>
+
+</body>
+</html>

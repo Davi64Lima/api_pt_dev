@@ -1,0 +1,8 @@
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="git-branch">
+<path id="Vector" d="M5.5 2.5V12.5" stroke="#837E9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M15.5 7.5C16.8807 7.5 18 6.38071 18 5C18 3.61929 16.8807 2.5 15.5 2.5C14.1193 2.5 13 3.61929 13 5C13 6.38071 14.1193 7.5 15.5 7.5Z" stroke="#837E9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M5.5 17.5C6.88071 17.5 8 16.3807 8 15C8 13.6193 6.88071 12.5 5.5 12.5C4.11929 12.5 3 13.6193 3 15C3 16.3807 4.11929 17.5 5.5 17.5Z" stroke="#837E9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M15.5 7.5C15.5 9.48912 14.7098 11.3968 13.3033 12.8033C11.8968 14.2098 9.98912 15 8 15" stroke="#837E9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
