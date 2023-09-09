@@ -9,7 +9,7 @@ router.get("/:quantity", newsController.findQuantity);
 router.post("/", upload.single("file"), AdminAuth, newsController.create);
 router.delete("/:id", newsController.deleteById);
 
-router.get("/:id", newsController.findById);
+router.get("/id/:id", newsController.findById);
 router.get("/cat/:categoria", newsController.findByCategorie);
 
 // router.get("/:id", newsController.findPerId);
